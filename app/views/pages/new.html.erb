@@ -1,0 +1,8 @@
+<%= link_to("<< Back Index",:action=>'index',:subject_id=>@subject_id.id) %>
+
+<h2> + Add New Pages </h2>
+	<%= form_for(:page,:url=>{:action=>'create',:subject_id=>@subject_id.id}) do |page| %>
+	<%= render(:partial => 'pages/partials/forms',:locals=>{:t => page}) %>
+
+	<%= submit_tag("Create Page",:class=>"submit_button") %>
+<% end %>

@@ -1,0 +1,8 @@
+<% @page_title="Admin | Edit" %>
+<h2 class='title'>Edit <%= @admin.username %></h2>
+
+<%= form_for(:admin,:url=>{:action=>'update',:id=>@admin.id}) do |t| %>
+	<%= render(:partial=>'admin_user/partial/form',:locals=>{:t => t}) %>
+
+	<%= submit_tag("Update Admin",:class=>'submit_button') %>
+<% end %>

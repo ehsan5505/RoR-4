@@ -1,0 +1,8 @@
+<%= error_messages_for(@admin) %>
+<h2 class='title'>+ Add New User </h2>
+
+<%= link_to("<< Back Index",:action=>"index") %>
+	<%= form_for(:admin,:url=>{:action=>'create'}) do |t| %>
+	<%= render(:partial=> 'admin_user/partial/form',:locals=>{:t => t}) %>
+	<%= 	submit_tag('Create Admin',:class=>'submit_button') %>
+<% end %>

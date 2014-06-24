@@ -1,0 +1,9 @@
+<%= link_to("<< Back Index",:action=>'index',:subject_id=>@subject_id.id) %>
+
+<h2 class='title'>Edit <%= @page.name %> </h2>
+<em>Please Select Change in the form for editing</em>
+
+	<%= form_for(:page,:url=>{:action=>'update',:id=>@page.id,:subject_id=>@subject_id.id}) do |t| %>
+	<%= render(:partial=> "pages/partials/forms" ,:locals=>{:t => t}) %>
+	<%= submit_tag("Update Page",:class=>'submit_button') %>
+<% end %>

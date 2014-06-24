@@ -1,0 +1,10 @@
+<h2 class="title"><%= @page_title= @page.name %></h2>
+	<%	@page.section.each do	|sec| %>
+		<%	case sec.content_type  %>
+		<% when 'html' %>
+			<%= raw(sanitize(sec.content,	:tags=>['strong','a','p','em'])) %>
+		<% when 'text' %>
+			<p><%= sec.content %></p>
+		<% end %>
+	<% end %>
+<!-- This is what we called an app -->

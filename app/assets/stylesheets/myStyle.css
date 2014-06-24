@@ -1,0 +1,287 @@
+/* 	This is css file use to style the content of the main admin page
+// remember!
+// first you have manifest the application.css to the include this file before other styles
+// second place stylesheet_link_tag() to the file where you want to use this stylesheet 
+in our case we place it in admin */
+
+html{
+	background:#4F483E;
+	width:100%;
+	height:auto;
+	margin-top:10px;
+	font-family:ubuntu,verdana,arial,sans-serif;
+}
+body{
+	width:80%;
+	height:auto;
+	margin:auto;
+	padding:20px;
+	border-right:1px dashed gray;
+	border-left:1px dashed white;
+	border-radius:30px 0 20px 0;
+	background:#D2B78F;
+}
+header{
+	font-family:lobster,verdana,arial,sans-serif;
+	letter-spacing: 1px;
+	height:70px;
+	width:50%;
+	padding:0;
+	border:5px solid #4F483E;
+	margin:auto;
+	position:relative;
+	float:right;
+	border-right:none;
+	border-radius:10px 0 0 20px;
+	background:transparent;
+	font-weight: normal;
+}
+nav{
+	width:30%;
+	background:rgba(125,244,41,0.7);
+
+	border:2px solid white;
+	float:right;
+	margin-top:100px;
+	border-radius:30px 0 0 40px;
+	min-height:450px;
+}
+section{
+	position:relative;
+	top:20px;
+	width:100%;
+	height:auto;
+	min-height:600px;
+	margin:auto;
+	padding:2px 5px;
+	margin-top:70px;
+	padding-top:50px;
+}
+
+footer{
+	text-align:right;
+	font-family:verdana,arial,sans-serif;
+	border-top:1px solid black;
+}
+
+table{
+	width:80%;
+	margin:auto;
+	font-family:ubuntu,calibri;
+	font-size:0.8em;
+}
+table a{
+	padding:0px;
+	margin:0;
+	text-align: center;
+	background:transparent;
+	color:orange;
+	font-family:inherit;
+}
+table a:hover{
+	font-weight: bold;
+	background: inherit;
+	text-transform: uppercase;
+	color:white;
+}
+tr{
+
+}
+th{
+	border:none;
+	padding:2px 5px;
+	margin:auto;
+	text-align: center;
+}
+td{
+	border:2px solid orange;
+	color:orange;
+	margin:auto;
+	border:inherit;
+	text-align:center;
+}
+
+table.show{
+	width:90%;
+	margin:auto;
+	padding:5px 2px;
+	color:black;
+}
+table.show td{
+	color:white;
+}
+table.show td :nth-child(even){
+	background:#4F483E;
+	opacity:0.7;
+}
+table.show td:nth-child(even){
+	background:#4F483E;
+	opacity:0.9;
+} 
+table td.action{
+	width:30%;
+	margin:auto;
+}
+table td a{
+	padding:5px;
+	margin:auto;
+	text-align:center;
+	padding:5px;
+}
+table input{
+	background:#f1f1f1;
+	border-radius:5px 0 5px 0;
+	padding:2px 20px;
+	width:70%;
+}
+table label{
+	font-family: verdana;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin:none;
+	padding:none;
+}
+.even{
+	background:#4F483E;
+
+}
+.odd{
+	background:#4F483E;
+	opacity:0.7;
+}
+/* class definations */
+.notice{
+		font-family:candara,calibri,arial,sans-serif;
+		font-variant:small-caps;
+		font-style: italic;
+		font-weight:bold;
+		color:red;
+		border:1px solid red;
+		background:transparent;
+		font-size:1.3em;
+		width:400px;
+		margin-left:50px;
+}
+.title{
+	font-family:ubuntu,verdana,arial,sans-serif;
+	font-size:1.8em;
+	font-variant: small-caps;
+	font-weight:normal;
+	letter-spacing:2px;
+	border-bottom:2px solid green;
+	width:auto;
+}
+a {
+	background:#4F483E;
+	color:red;
+	font-weight:bold;
+	letter-spacing: 2px;
+	opacity:0.8;
+	padding:5px;
+	margin:auto;
+	float:right;
+	margin:0 10px;
+	text-decoration: none;
+}
+a:hover{
+	opacity:0.9;
+	background:#4F483E;
+	color:orange;
+}
+.found{
+	font-family:verdana,'times-new-roman',sans-serif;
+	color:red;
+	opacity:0.7;
+	font-size:1.4em;
+	font-weight:normal;
+	border-bottom:5px solid orange;
+	border-left:2px solid orange;
+	width:200px;
+	border-radius:0 0 0 5px;
+}
+.submit_button {
+	padding:10px 50px;
+	border:2px solid white;
+	border-radius:12px;
+	float:right;
+}
+.submit_button: {
+	background:#40403e;
+	padding:10px 50px;
+	border:2px solid white;
+	border-radius:12px;
+	float:right;
+}
+nav li{
+	list-style: none;
+	font-family: calibri,sans-serif;
+	font-size:1.1em;
+}
+nav li li{
+	font-size:0.9em;
+	font-style:italic;
+}
+nav li li a{
+	border:none;
+	background:none;
+	text-transform: none;
+	text-align: left;
+	display:block;
+	color:green;
+}
+nav li li a:hover{
+	background:transparent;
+	text-transform: uppercase;
+	color:#40403e;
+	font-weight: bold;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+}
+/* 		--- 	This is for the visible status		---- 	*/
+span.status{	display:block; width:10px;height:10px;
+		margin:0.25em;padding:0;border:1px solid black;margin:0 auto;	}
+span.status.true{	background:green;	color:green;	}
+span.status.false{	background:red;		color:red;	}
+
+/* ERROR Handling in the form*/
+
+.error_form{
+	width:500px;
+	margin-left:300px;
+	position:center;
+	text-align:center;
+	font-family:ubuntu,verdana;
+}
+.error_head{
+	padding:10px 0;
+	font-font:1.4em;
+	font-weight:bold;
+	background:maroon;
+}
+.error_des{
+	font-style:italic;
+	font-size:0.8;
+	font-family:arial,sans-serif;
+	text-align: inherit
+}
+.error_des li{
+	list-style:arrow;
+}
+.field_with_errors label{
+	background:red;
+	padding:5px 50px;
+}
+.field_with_errors input{
+	border:1px solid red;
+}
+.reset li,.reset a{
+	padding:5px 10px;
+	margin:auto;
+	display:block;
+	list-style: none;
+	text-decoration: none;
+	text-align: center;
+	width:400px;
+	clear:both;
+	background: none;
+}

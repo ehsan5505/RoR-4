@@ -1,0 +1,15 @@
+<%= link_to("<< Back Index",:action => 'index',:subject_id=>@subject.id,:id => @page.id ) %>
+
+<h2 class='title'> DELETE <%= @section.name %> </h2>
+
+<table>
+<p><strong>Are you sure, you want to delete this page</strong></p>
+<%= form_for(:sections,:url=>{:action=>'destroy',:id=>@section.id,:subject_id=>@subject.id,:page_id=>@page.id}) do |sec| %>
+<tr>
+	<td><%= @section.name %></td>
+</tr>
+</table>
+<div class="form_button">
+	<%= submit_tag("Delete Section",:class=>'submit_button') %>
+</div>
+<% end %>

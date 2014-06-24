@@ -1,0 +1,15 @@
+<%= error_messages_for(@subject) %>
+<table class='show'>
+<tr>
+	<th><%= t.label(:name,"Name:") %></th>
+	<td><%= t.text_field(:name) %></td>
+</tr>
+<tr>
+	<th><%= t.label(:position) %></th>
+	<td><%= t.select(:position,1..@subject_count) %></td>
+</tr>
+<tr>
+	<th><%= t.label(:visible) %></th>
+	<td><%= t.check_box(:visible) %></td>
+</tr>
+</table>

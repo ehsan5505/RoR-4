@@ -1,0 +1,37 @@
+<%= link_to("<< Back Index",:action=>'index',:id=>@page.id,:subject_id=>@subject.id) %>
+
+<h2 class='title'><%= @section.name %></h2>
+<table class='show'>
+<tr>
+	<th>Name:</th>
+	<td><%= @section.name %></td>
+</tr>
+<tr>
+	<th>Position:</th>
+	<td><%= @section.position %></td>
+</tr>
+<tr>
+	<th>Page ID</th>
+	<td><%= @section.page_id %></td>
+</tr>
+<tr>
+	<th>Visible:</th>
+	<td><%= @section.visible ? "Yes" : "No" %></td>
+</tr>
+<tr>
+	<th>Content Type:</th>
+	<td><%= @section.content_type %></td>
+</tr>
+<tr>
+	<th>Content:</th>
+	<td><%= @section.content %></td>
+</tr>
+<tr>
+	<th>Created At:</th>
+	<td><%= @section.created_at %></td>
+</tr>
+<tr>
+	<th>Update At:</th>
+	<td><%= @section.updated_at %></td>
+</tr>
+</table>

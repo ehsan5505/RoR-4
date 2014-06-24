@@ -1,0 +1,10 @@
+<%= link_to("<< Back Index",:action=>'index',:id=>@page.id,:subject_id=>@subject.id) %>
+
+<h2 class='title'> + Add New Section ANS</h2>
+
+<%= form_for(:section,:url=>{:action=>'create',:id=>@section.id,:subject_id=>@subject.id,:page_id=>@page.id}) do |t| %>
+	<%= render(:partial=>"section/partials/form",:locals=>{ :obj => t }) %>
+
+		<td><%= submit_tag('Create Section',:class=>'submit_button') %></td>
+
+<% end %>

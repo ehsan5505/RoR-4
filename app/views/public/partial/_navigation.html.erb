@@ -1,0 +1,14 @@
+<ul>
+	<% Subject.where(:visible => true).order("position ASC").each do |sub| %>
+		<li class="subjectNav">
+			<%= sub.name %>
+			<ul>
+			<% Page.where(:subject_id => sub.id).order("position ASC").each do |pg| %>
+				<li>
+					<%= pg.name %>
+				</li>
+			<% end %>
+			</ul>
+		</li>
+	<% end %>
+</ul>

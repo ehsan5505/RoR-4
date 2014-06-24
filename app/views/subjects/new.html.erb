@@ -1,0 +1,11 @@
+<%= link_to("Back To Index",{:action=>'index'},:class=>'back_to_index') %>
+<div class="newSubject">
+<h2 class='title'> + Add Subjects </h2>
+	<%= form_for(:subject,:url=>{:action=>'create'}) do |t| %>
+	<%= render(:partial=>"subjects/partials/form",:locals=>{:t => t}) %>
+<br/>
+<div class="form_button">
+<%= submit_tag(" Create Subject",:class=>'submit_button') %>
+</div>
+<% end %>
+</div>

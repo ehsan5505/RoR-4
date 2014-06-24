@@ -1,0 +1,27 @@
+<table class='show'>
+<tr>
+	<th><%= obj.label(:name,"Name:") %></th>
+	<td><%= obj.text_field(:name) %></td>
+</tr>
+<tr>
+	<th><%= obj.label(:position) %></th>
+	<td><%= obj.text_field(:position) %></td>
+</tr>
+<tr>
+	<th><%= obj.label(:page_id) %></th>
+	<td><%= obj.select(:page_id,@sections.map{ |p| [p.name,p.id] } ) %></td>
+</tr>
+<tr>
+	<th><%= obj.label(:visible) %></th>
+	<td><%= obj.check_box(:visible) %></td>
+</tr>
+<tr>
+	<th><%= obj.label(:content_type) %></th>
+	<td><%= obj.radio_button(:content_type,"text") %>TEXT
+	<%= obj.radio_button(:content_type,"html") %>HTML</td>
+</tr>
+<tr>
+	<th><%= obj.label(:content) %></th>
+	<td><%= obj.text_area(:content,:size=>'40x10') %></td>
+</tr>
+</table>

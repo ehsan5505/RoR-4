@@ -1,0 +1,35 @@
+<%= link_to("<< Back Subjects",:controller=>'subjects') %>
+<h2 class='title'>Pages</h2>
+
+<%= link_to("+ Add Pages",:action=>'new',:subject_id=>@subject_id.id) %>
+
+<h4 class='found' ><%= pluralize(@pages.size,"Pages") %> found </h4>
+<table>
+<tr>
+	<th>&nbsp;</th>
+	<th>Subject ID</th>
+	<th>Name</th>
+	<th>Visible</th>
+	<th>Sections</th>
+	<th>Link</th>
+	<th>Action</th>
+</tr>
+	<% @pages.each do |page| %>
+<tr class="<%= cycle('odd','even') %>">
+	<td><%= page.position %></td>
+	<td class="center"><%= page.subject_id %></td>
+	<td class="center"><%= page.name %></td>
+	<td class="center"><%= status_tag(page.visible) %></td>
+	<td class="center"><%= page.section.size %></td>
+	<td class="center"><%= link_to(page.permalink,page.permalink) %></td>
+	<td class="center">
+		<%= link_to("Show",:action=>'show',:id=>page.id,:action=>'show',:subject_id=>@subject_id.id) %>
+		<%= link_to("Edit",:action=>'edit',:id=>page.id,:subject_id=>@subject_id.id) %>
+		<%= link_to("Delete",:action=>'delete',:id=>page.id,:subject_id=>@subject_id.id) %>
+		<%= link_to("Section",:controller=>'section',:id=>page.id,:subject_id=>@subject_id.id) %>
+	</td>
+	</tr>
+	<% end %>
+
+</table>
+

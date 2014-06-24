@@ -1,0 +1,10 @@
+<%= link_to("<< Back to Index",:action=>'index',:class_name => 'back_to_index') %>
+
+<h2 class='title'>Delete : <%= @subject.name %> </h2>
+
+<%= form_tag({:action=>'destroy',:id=>@subject.id}) do %>
+<p><em> Are you sure, you want to delete this page </em></p>
+	<div class="reference name"><%= @subject.name %></div>
+
+<%= submit_tag("Delete Subject",:class=>'submit_button') %>
+<% end %>

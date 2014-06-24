@@ -1,0 +1,24 @@
+<%= link_to("Back To Index",{:action=>'index'},:class=>'back_to_index') %>
+
+<h2 class='title'><%= @subject.name %></h2>
+<p><em>Info about Subject</em></p>
+<hr/>
+<table class="show">
+<tr>
+	<th> Position : </th>
+	<td><%= @subject.position %></td>
+</tr>
+<tr>
+	<th> Visible : </th>
+	<td><%= @subject.visible ? "Yes" : "No" %></td>
+</tr>
+<tr>
+	<th> Created At : </th>
+	<td><%= @subject.created_at %></td>
+</tr>
+<tr>
+	<th> Upadate At : </th>
+	<td><%= @subject.updated_at %></td>
+</tr>
+
+</table>

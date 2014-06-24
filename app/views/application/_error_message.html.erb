@@ -1,0 +1,12 @@
+<% if object && object.errors.size > 0  %>
+<div class='error_form'>
+<h3 class='error_head'>
+<%= pluralize(object.errors.size,"Error") %> are found in the form</h3>
+<ul>
+<p class='error_des'>
+<% object.errors.full_messages.each do |msg| %></p>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+</div>
+<% end %>

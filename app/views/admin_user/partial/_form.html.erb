@@ -1,0 +1,23 @@
+<%= error_messages_for(@admin) %>
+<table>
+<tr>
+	<th><%= t.label(:username) %></th>
+	<td><%= t.text_field(:username) %></td>
+</tr>
+<tr>	
+	<th><%= t.label(:first_name) %></th>
+	<td><%= t.text_field(:first_name) %></td>
+</tr>
+<tr>
+	<th><%= t.label(:last_name) %></th>
+	<td><%= t.text_field(:last_name) %></td>
+</tr>
+<tr>
+	<th><%= t.label(:email) %></th>
+	<td><%= t.text_field(:email) %></td>
+</tr>
+<tr>
+	<th><%= t.label(:password) %></th>
+	<td><%= t.password_field(:password) %></td>
+</tr>
+</table>

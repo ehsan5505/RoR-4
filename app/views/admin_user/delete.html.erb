@@ -1,0 +1,11 @@
+<h2 class='title' >Delete <%= @admin.username %></h2>
+<%= link_to("<< Back Index",:action=>'index') %>
+<%= form_for(:admin,:url=>{:action=>'destroyed',:id=>@admin.id} ) do |t| %>
+<table class='show'>
+<p> Are you sure you want to delete the User Profile.</p>
+
+<h3 style="text-align:center;margin:auto;"><%= @admin.username %></h3>
+	<%= submit_tag("Delete Profile",:class=>"submit_button") %>
+</table>
+<% end %>
+

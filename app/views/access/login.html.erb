@@ -1,0 +1,17 @@
+<% @page_title = "Login" %>
+<h2 class='title'>Logic Page</h2>
+
+<%= form_tag(:action =>'attempt_login') do  %>
+<table class="show">
+<tr>
+	<td><%= label_tag(:username,"Username") %></td>
+	<td><%= text_field_tag(:username) %></td>
+</tr>
+<tr>
+	<td><%= label_tag(:password,"Password") %></td>
+	<td><%= password_field_tag(:password) %></td>
+</tr>
+</table>
+	<%= submit_tag("Login",:class=>"submit_button") %>
+
+<% end %>

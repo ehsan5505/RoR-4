@@ -1,0 +1,23 @@
+<%= link_to("<< Back Index",:action=>'index',:subject_id=> params[:subject_id]) %>
+<h2 class='title'><%= @page.name %></h2>
+<table class='show'>
+<tr>
+	<th>Position:</th>
+	<td><%= @page.position %></td>
+</tr><tr>
+	<th>Visible:</th>
+	<td><%= @page.visible ? "Yes" : "No" %></td>
+</tr><tr>
+	<th>Subject ID</th>
+	<td><%= @page.subject_id %></td>
+</tr><tr>
+	<th>Permalink:</th>
+	<td><%= @page.permalink %></td>
+</tr><tr>
+	<th>Created At:</th>
+	<td><%= @page.created_at %></td>
+</tr><tr>
+	<th>Updated At:</th>
+	<td><%= @page.updated_at %></td>
+</tr>
+</table>

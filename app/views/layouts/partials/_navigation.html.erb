@@ -1,0 +1,14 @@
+<ul>
+	<% subject.each do |sub| %>
+		<li class="subjectNav">
+			<%= sub.name %>
+			<ul>
+			<% Page.where(:subject_id => sub.id).order("position ASC").each do |pg| %>
+				 <li class='reset' >
+				 <%= link_to(pg.name,:action=>'show',:permalink=>pg.permalink) %>
+				</li>
+			<% end %>
+			</ul>
+		</li>
+	<% end %>
+</ul>

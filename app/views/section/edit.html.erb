@@ -1,0 +1,10 @@
+<%= link_to "<< Back Index",:action=>'index',:class_name=>'class back',:id=>@page.id,
+:subject_id=>@subject.id %>
+
+<h2 class='title'>Edit <%= @section.name %> </h2>
+<%= form_for(:section,:url=>{:action=>'update',:id=>@section.id,:page_id=>@page.id,
+	:subject_id=>@subject.id}) do |sec| %>
+	<%= render(:partial=>"section/partials/form",:locals=>{:obj => sec}) %>
+		<%= submit_tag("Update Section",:class=>'submit_button') %>
+	
+<% end %>

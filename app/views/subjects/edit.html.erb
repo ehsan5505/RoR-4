@@ -1,0 +1,9 @@
+<%= link_to("Back To Index",{:action=>'index'},:class=>'back_to_index') %>
+<div class="editSubject">
+<h2 class='title'> Edit Subjects </h2>
+			<%= form_for(:subject,:url=>{:action=>'update',:id=>@subject.id}) do |t| %>
+			<%= render(:partial=>"subjects/partials/form",:locals=>{:t => t}) %>
+<br/>
+	<%= submit_tag(" Update Subject",:class=>'submit_button') %>
+	<% end %>
+</div>

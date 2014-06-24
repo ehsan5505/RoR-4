@@ -1,0 +1,28 @@
+<html !DOCTYPE>
+<head>
+	<title> SIMPLE CMS || <%= @page_title || "Admin" %></title>
+	<!-- Download web font from google fonts of ubuntu -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	 --><!-- End of the web font -->
+	<%= stylesheet_link_tag('application') %>
+</head>
+<body>
+	<header>
+	<h1> Simple <acronym title="Content Management System">CMS</acronym> Development</h1>
+	</header>
+		<% if !flash[:notice].blank? %>
+			<p class="notice"><em>	<%= flash[:notice] %> </em></p>
+		<% end %>
+		<section>
+
+
+		<!-- Before Yield -->
+		<%= yield %>
+		<!-- After Yield -->
+</section>
+<footer>
+		<p><strong>&reg;ESI Technology</strong>.&copy;<i>All Right Reserved</i></p>
+</footer>
+</body>
+</html>
