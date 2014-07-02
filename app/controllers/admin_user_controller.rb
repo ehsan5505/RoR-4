@@ -3,6 +3,9 @@ class AdminUserController < ApplicationController
 	# confirm the loogin
   before_action	:confirm_login
 
+  #there is missing link between user and Section
+  # I have not configure it out
+
   # latout
   layout	'admin'
 
